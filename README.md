@@ -1,8 +1,6 @@
 # SIMPLE TODO-LIST API WITH DRF
 
-This is a simple project that explores in depth the basic concepts in Django and in depth concept of Django REST Framework.
-
-Standards followed in this project includes recommedations made in the book _Two Scoops Of Django_ and the _Django REST Framework Documentation_.
+This is a simple project that explores the basic concepts in Django and Django REST Framework in depth. Standards followed in this project include recommedations made in the book _Two Scoops Of Django_ and the _Django REST Framework Documentation_.
 
 ## Endpoints
 
