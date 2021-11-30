@@ -31,7 +31,9 @@ class TodoList(AbstractBaseModel):
     """
 
     list_name = models.CharField(max_length=50)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
+    # Here for the purpose of getting to know signals
+    items_count = models.IntegerField(null=True, blank=True)
 
 
 class TodoListLine(AbstractBaseModel):
@@ -39,6 +41,8 @@ class TodoListLine(AbstractBaseModel):
 
     todo_list = models.ForeignKey("TodoList", on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     scheduled_at = models.DateTimeField(null=True, blank=True)
-    sub_line = models.ForeignKey("self", on_delete=models.CASCADE)
+    sub_line = models.ForeignKey(
+        "self", on_delete=models.CASCADE, null=True, blank=True
+    )
