@@ -32,7 +32,6 @@ class TodoList(AbstractBaseModel):
 
     list_name = models.CharField(max_length=50)
     description = models.TextField(null=True, blank=True)
-    # Here for the purpose of getting to know signals
     items_count = models.IntegerField(null=True, blank=True)
 
 
